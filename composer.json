@@ -1,0 +1,24 @@
+{
+	"name" : "trialog/multimediawiki",
+	"description" : "An extension to manage several wikis with one MediaWiki installation.",
+	"authors" : [{
+			"name" : "Olivier Maridat",
+			"homepage" : "http://trialog.com",
+			"role" : "developper"
+		}
+	],
+	"license" : "LGPL-3.0",
+	"require" : {
+		"php" : ">=5.3.3"
+	},
+	"autoload" : {
+		"psr-0" : {
+			"" : "src/"
+		}
+	},
+	"support" : {
+		"source" : "https://github.com/trialog/multimediawiki",
+		"issues" : "https://github.com/trialog/multimediawiki/issues",
+		"wiki" : "https://github.com/trialog/multimediawiki/wiki"
+	}
+}
