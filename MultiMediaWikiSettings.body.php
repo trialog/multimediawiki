@@ -26,6 +26,7 @@ if (! empty($server) && $server != "wiki.trialog.com" && $server != "localhost"
 	$wgFileCacheDirectory = $wgUploadDirectory.'/cache';
 	$wgCacheDirectory = $IP.'/cache/'.$wikiCode;
 	$wgLogo = $wgUploadPath.'/logo/wiki.png';
+	$wgFavicon = $wgUploadPath.'/logo/favicon.ico';
 	require_once $IP . '/LocalSettings_Wiki'.ucfirst($wikiCode).'.php';  
 }
 // Mode 2: by folder name
@@ -68,6 +69,7 @@ else {
 		$wgFileCacheDirectory = $wgUploadDirectory.'/cache';
 		$wgCacheDirectory = $IP.'/cache/'.$wikiCode;
 		$wgLogo = $wgUploadPath.'/logo/wiki.png';
+		$wgFavicon = $wgUploadPath.'/logo/favicon.ico';
 	}
 }
 
