@@ -42,7 +42,7 @@ else {
 		    $maintenance->globals();
 		    $strGlobals = ob_get_clean();
 		    if (preg_match('!--wiki!', $strGlobals)) {
-			$_GET['wiki'] = preg_replace('!^.*--wiki\n\s*\[\d+\]\s*=>\s*([a-zA-Z -]+)\s*\n.*$!s', '$1', $strGlobals);
+			$_GET['wiki'] = preg_replace('!^.*--wiki\n\s*\[\d+\]\s*=>\s*([a-zA-Z0-9 -]+)\s*\n.*$!s', '$1', $strGlobals);
 		    }
 		}
 		$wgShowExceptionDetails = true;
