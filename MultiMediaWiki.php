@@ -7,29 +7,29 @@
  *
  * @file
  * @ingroup Extensions
- * @version 1.0
+ * @version 1.0.1
  * @license LGPL3
  * @link https://github.com/trialog/multimediawiki
  * @author Olivier Maridat
  */
-
-if ( !defined( 'MEDIAWIKI' ) ) {
-	die( "This is not a valid entry point.\n" );
+if (! defined('MEDIAWIKI')) {
+    die("This is not a valid entry point.\n");
 }
 // Extension credits for Special:Version
 $wgExtensionCredits['specialpage'][] = array(
-	'path' => __FILE__,
-	'name' => 'MultiMediaWiki',
-	'descriptionmsg' => 'multimediawiki-desc',
-	'version' => 1.0,
-	'url' => 'https://github.com/trialog/multimediawiki',
+    'path' => __FILE__,
+    'name' => 'MultiMediaWiki',
+    'descriptionmsg' => 'multimediawiki-desc',
+    'version' => '1.0.1',
+    'url' => 'https://github.com/trialog/multimediawiki',
     'license-name' => 'https://github.com/trialog/multimediawiki/blob/master/LICENSE',
-	'author' => array(
-		'Olivier Maridat'
-	),
+    'author' => array(
+        'Olivier Maridat'
+    )
 );
 
 // Set up the new special page
-$dir = dirname( __FILE__ ) . '/';
+$dir = dirname(__FILE__) . '/';
+include($dir . '/MultiMediaWikiSettings.body.php');
 $wgAutoloadClasses['MultiMediaWikiSettings'] = $dir . '/MultiMediaWikiSettings.body.php';
 $wgExtensionMessagesFiles['MultiMediaWiki'] = $dir . 'MultiMediaWiki.i18n.php';
